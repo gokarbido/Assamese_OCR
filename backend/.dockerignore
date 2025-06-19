@@ -1,0 +1,4 @@
+# Exclude model files from build context
+hf_models/
+ocr_models/
+

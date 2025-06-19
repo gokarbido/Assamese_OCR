@@ -1,0 +1,17 @@
+fastapi
+uvicorn
+pytesseract
+Pillow
+transformers
+torch
+python-multipart
+slowapi
+redis
+redis-py-cluster
+celery
+python-dotenv
+pytest
+pytest-asyncio
+pytest-mock
+pytest-cov
+sacremoses
