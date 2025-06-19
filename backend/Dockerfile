@@ -28,6 +28,8 @@ RUN pip install sentencepiece
 
 # RUN pip install typing-extensions==4.3.0
 
+RUN pip install opencv-python-headless
+
 #RUN pip install easyocr
 
 # Copy application code

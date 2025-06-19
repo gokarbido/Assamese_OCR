@@ -18,6 +18,7 @@ import json
 import time
 #import easyocr
 import numpy as np
+import cv2
 
 load_dotenv()
 
@@ -140,6 +141,13 @@ async def upload_image(request: Request, file: UploadFile = File(...)):
         # Load and compress image
         image = Image.open(io.BytesIO(content)).convert("RGB")
         image = compress_image(image)
+        # Preprocess: convert to grayscale and apply Otsu's thresholding
+        open_cv_image = np.array(image)
+        gray = cv2.cvtColor(open_cv_image, cv2.COLOR_RGB2GRAY)
+        # Apply Otsu's thresholding
+        _, thresh = cv2.threshold(gray, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)
+        # Convert back to PIL Image for pytesseract
+        image = Image.fromarray(thresh)
     except Exception as e:
         raise HTTPException(status_code=400, detail=f"Invalid image: {str(e)}")
     
