@@ -40,7 +40,7 @@ A web application to extract Assamese text from images and translate it into Eng
   3. Place it in your Tesseract `tessdata` directory (e.g., `C:\Program Files\Tesseract-OCR\tessdata`)
   4. Run `tesseract --list-langs` to confirm `ben` is listed
 
-  **Linux:**
+- **Linux:**
   1. sudo apt update
   2. sudo apt install tesseract-ocr  
   
