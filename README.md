@@ -28,7 +28,7 @@ A web application to extract Assamese text from images and translate it into Eng
 
 ### 1. Backend
 #### Prerequisites
-- Python 3.8+
+- Python 3.10+
 - Tesseract OCR installed with Bengali language pack (`ben`)
 - Redis server
 - Celery
@@ -85,7 +85,7 @@ uvicorn app:app --reload
 
 ### 2. Frontend
 #### Prerequisites
-- Node.js 16+
+- Node.js 18+
 
 #### Install Dependencies
 ```
